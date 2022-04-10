@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstContainerController" customModule="WeGoTrip" customModuleProvider="target">
+            <connections>
+                <outlet property="titleLabel" destination="REm-Hx-whz" id="4ZX-fR-cu9"/>
+                <outlet property="view" destination="If8-iT-ffv" id="x1U-KL-KaI"/>
+                <outletCollection property="questionViews" destination="J50-q9-0Hr" collectionClass="NSMutableArray" id="0bO-sw-MdK"/>
+                <outletCollection property="questionViews" destination="QNU-uh-p4g" collectionClass="NSMutableArray" id="G2m-p1-MfA"/>
+                <outletCollection property="questionViews" destination="0zJ-zH-qbJ" collectionClass="NSMutableArray" id="hFy-xM-p8D"/>
+                <outletCollection property="questionViews" destination="Zka-RD-TFA" collectionClass="NSMutableArray" id="Jcz-vO-eaJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="If8-iT-ffv">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REm-Hx-whz">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1o2-kR-sun" userLabel="Questions Stack">
+                    <rect key="frame" x="0.0" y="49" width="414" height="344"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J50-q9-0Hr" customClass="RateQuestionView" customModule="WeGoTrip" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNU-uh-p4g" customClass="RateQuestionView" customModule="WeGoTrip" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="88" width="414" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="750" constant="80" id="51F-RU-mWP"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zJ-zH-qbJ" customClass="RateQuestionView" customModule="WeGoTrip" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="176" width="414" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zka-RD-TFA" customClass="RateQuestionView" customModule="WeGoTrip" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="264" width="414" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="QNU-uh-p4g" firstAttribute="height" secondItem="J50-q9-0Hr" secondAttribute="height" id="0pz-lV-w7q"/>
+                        <constraint firstItem="QNU-uh-p4g" firstAttribute="height" secondItem="Zka-RD-TFA" secondAttribute="height" id="lz4-gH-fWN"/>
+                        <constraint firstItem="QNU-uh-p4g" firstAttribute="height" secondItem="0zJ-zH-qbJ" secondAttribute="height" id="wBW-5p-4XX"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="uQq-zF-c6L"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1o2-kR-sun" firstAttribute="leading" secondItem="If8-iT-ffv" secondAttribute="leading" id="1mf-BC-k1N"/>
+                <constraint firstItem="uQq-zF-c6L" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1o2-kR-sun" secondAttribute="bottom" id="2cW-zo-mSG"/>
+                <constraint firstAttribute="trailing" secondItem="1o2-kR-sun" secondAttribute="trailing" id="4NA-oS-NqD"/>
+                <constraint firstItem="1o2-kR-sun" firstAttribute="top" secondItem="REm-Hx-whz" secondAttribute="bottom" constant="25" id="Mng-Ji-nb7"/>
+                <constraint firstItem="REm-Hx-whz" firstAttribute="top" secondItem="uQq-zF-c6L" secondAttribute="top" id="Qvg-I1-ZIP"/>
+                <constraint firstAttribute="trailing" secondItem="REm-Hx-whz" secondAttribute="trailing" id="as4-Jv-Cja"/>
+                <constraint firstItem="REm-Hx-whz" firstAttribute="leading" secondItem="If8-iT-ffv" secondAttribute="leading" id="trQ-uw-ec9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="260.80000000000001" y="-558.62068965517244"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

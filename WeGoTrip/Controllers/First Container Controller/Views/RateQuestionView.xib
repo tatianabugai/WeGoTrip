@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RateQuestionView" customModule="WeGoTrip" customModuleProvider="target">
+            <connections>
+                <outlet property="questionLabel" destination="wt5-8x-rgR" id="tSd-Od-4xd"/>
+                <outlet property="rateLabel" destination="mLT-il-6lw" id="uYi-Tw-lMG"/>
+                <outlet property="slider" destination="oY8-yY-SWM" id="Ld0-At-7KS"/>
+                <outlet property="view" destination="iN0-l3-epB" id="UAR-QI-5g7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mvu-lC-yil">
+                    <rect key="frame" x="-11.5" y="-4" width="437" height="88"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q8J-XE-Mth">
+                            <rect key="frame" x="12" y="0.0" width="413" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wt5-8x-rgR">
+                                    <rect key="frame" x="0.0" y="0.0" width="373" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="😁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLT-il-6lw">
+                                    <rect key="frame" x="383" y="0.0" width="30" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oY8-yY-SWM" customClass="RateQuestionSlider" customModule="WeGoTrip" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="44" width="437" height="44"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="maxCount">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trackCircleRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="index">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="sliderCircleRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trackHeight">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="oY8-yY-SWM" firstAttribute="leading" secondItem="mvu-lC-yil" secondAttribute="leading" id="HWN-Vj-jrI"/>
+                        <constraint firstAttribute="trailing" secondItem="Q8J-XE-Mth" secondAttribute="trailing" constant="12" id="b7o-PM-Lcf"/>
+                        <constraint firstAttribute="trailing" secondItem="oY8-yY-SWM" secondAttribute="trailing" id="czI-2U-MIz"/>
+                        <constraint firstItem="Q8J-XE-Mth" firstAttribute="leading" secondItem="mvu-lC-yil" secondAttribute="leading" constant="12" id="fP3-TB-yZe"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mvu-lC-yil" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1.055" id="KPY-zU-jCN"/>
+                <constraint firstItem="mvu-lC-yil" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bs0-Qi-lLs"/>
+                <constraint firstItem="mvu-lC-yil" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1.1" id="ihC-Iw-Ox5"/>
+                <constraint firstItem="mvu-lC-yil" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ykh-K4-6Ml"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="oY8-yY-SWM">
+            <size key="intrinsicContentSize" width="437" height="50"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondContainerController" customModule="WeGoTrip" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicatorView" destination="fpK-Sz-f57" id="wJD-xq-2pc"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ccQ-bM-VEa"/>
+                <outletCollection property="questionViews" destination="cqV-T3-t41" collectionClass="NSMutableArray" id="YMe-Em-8V6"/>
+                <outletCollection property="questionViews" destination="XNT-Vx-Jff" collectionClass="NSMutableArray" id="fSn-m8-bDM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SDT-l5-FRG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqV-T3-t41" customClass="TextQuestionView" customModule="WeGoTrip" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="Y6K-mh-axh"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNT-Vx-Jff" customClass="TextQuestionView" customModule="WeGoTrip" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="140" width="414" height="120"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="cqV-T3-t41" firstAttribute="height" secondItem="XNT-Vx-Jff" secondAttribute="height" id="l3X-BD-Ch4"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpK-Sz-f57" customClass="ActivityIndicatorView" customModule="WeGoTrip" customModuleProvider="target">
+                    <rect key="frame" x="187" y="130" width="40" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="P0X-sS-fLa"/>
+                        <constraint firstAttribute="width" secondItem="fpK-Sz-f57" secondAttribute="height" multiplier="1:1" id="PVp-6p-k43"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="SDT-l5-FRG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5OA-Ju-iNK"/>
+                <constraint firstItem="SDT-l5-FRG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="77X-Po-hFt"/>
+                <constraint firstAttribute="trailing" secondItem="SDT-l5-FRG" secondAttribute="trailing" id="C3G-ix-Spj"/>
+                <constraint firstItem="fpK-Sz-f57" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="VBD-DI-NJc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SDT-l5-FRG" secondAttribute="bottom" id="fZs-8Y-aXR"/>
+                <constraint firstItem="fpK-Sz-f57" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="uZj-cH-T8a"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="87"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
