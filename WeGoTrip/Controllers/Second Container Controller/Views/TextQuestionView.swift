@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @IBDesignable
-class TextQuestionView: UIView, NameDescribable {
+class TextQuestionView: UIView, Describable {
     
     // MARK: - Outlets
     @IBOutlet private var view: UIView!

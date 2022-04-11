@@ -14,7 +14,7 @@ protocol WrappingControllerDataSource {
     var cancelButtonTitle: String { get }
 }
 
-class WrappingController: UIViewController, NameDescribable {
+class WrappingController: UIViewController, Describable {
     
     // MARK: - Outlets
     @IBOutlet private var imageView: ImageView!

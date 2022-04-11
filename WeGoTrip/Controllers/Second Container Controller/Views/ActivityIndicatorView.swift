@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @IBDesignable
-class ActivityIndicatorView: UIView, NameDescribable {
+class ActivityIndicatorView: UIView, Describable {
     
     // MARK: - Outlets
     @IBOutlet private var view: UIView!

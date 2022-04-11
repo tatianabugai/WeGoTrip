@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RateQuestionView: UIView, NameDescribable {
+final class RateQuestionView: UIView, Describable {
     
     // MARK: - Outlets
     @IBOutlet private var view: UIView!

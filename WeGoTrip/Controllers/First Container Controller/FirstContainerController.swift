@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class FirstContainerController: UIViewController, NameDescribable, WrappingControllerDataSource {
+class FirstContainerController: UIViewController, Describable, WrappingControllerDataSource {
     
     // MARK: - Outlets
     
@@ -50,7 +50,7 @@ class FirstContainerController: UIViewController, NameDescribable, WrappingContr
         // Update view
         guard let questionView = findQuestionView(byID: questionRawValue) else { fatalError() }
         guard let rate = Rate(rawValue: rateValue) else { fatalError() }
-        let emoji = emoji(for: rate)
+        let emoji = self.emoji(for: rate)
         questionView.rateLabel.text = emoji
     }
     
@@ -64,7 +64,7 @@ class FirstContainerController: UIViewController, NameDescribable, WrappingContr
         for (index, questionView) in questionViews.enumerated() {
             let question = RateQuestion.allCases[index]
             let startRate = Constants.startRate
-            let emoji = emoji(for: startRate)
+            let emoji = self.emoji(for: startRate)
             questionView.questionLabel.text = question.title
             questionView.rateLabel.text = emoji
             

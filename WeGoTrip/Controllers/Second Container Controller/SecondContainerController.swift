@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondContainerController: UIViewController, NameDescribable, WrappingControllerDataSource, UITextViewDelegate {
+class SecondContainerController: UIViewController, Describable, WrappingControllerDataSource, UITextViewDelegate {
     
     // MARK: - Properties
     

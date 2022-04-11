@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol NameDescribable {
+protocol Describable {
     var typeName: String { get }
     static var typeName: String { get }
 }
 
-extension NameDescribable {
+extension Describable {
     var typeName: String {
         return String(describing: type(of: self))
     }
